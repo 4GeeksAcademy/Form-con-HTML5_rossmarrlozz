@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form HTML 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+
+<body>
+    <div class=" container border-dark d-flex justify-content-center">
+        <form class= "row g-3 needs-validation" novalidate>
+            <!-- Encabezado -->
+            <div class="py-3">
+                <div class="bg-body-tertiary">
+                    <h1>Payment form example</h1>
+                </div>
+            
+                <div>
+                    <div class="pb-2 mb-3 text-dark border-bottom border-danger bg-danger-subtle rounded">
+                       Some fields are missing
+                    </div>
+                </div>
+
+                <!-- Información Card -->
+                <div class="col d-flex align-items-center justify-content-between">
+                    <div class=" mb-3">
+                    <label for="card" class="form-label">Card #</label>
+                    <input type="text" class="form-control" id="card" placeholder="xxxx xxxx xxxx xxxx" pattern="\d{16}"
+                        required>
+                    <div class="valid-feedback"> All good</div>
+                    <div class="invalid-feedback">Please enter a valid card number. </div>
+                </div>
+    
+                <div class="col mb-3">
+                    <label for="card" class="form-label">CVC #</label>
+                    <input type="text" class="form-control" id="card" placeholder="000" pattern="\d{3}" required>
+                    <div class="valid-feedback"> All good</div>
+                    <div class="invalid-feedback">Please enter a valid CVC card number.</div>
+                </div>
+
+                <div class="col input-group mb-3">
+                    <label for="card" class="form-label">Amount</label>
+                    <span class="input-group-text">$</span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar) placeholder="Amount" required>
+                    <div class="valid-feedback"> All good</div>
+                    <div class="invalid-feedback">Please enter a amount.</div>
+                </div>
+    
+            </div>
+
+            <!-- Información Usuario -->
+            <div class="col d-flex align-items-center justify-content-between">
+                <div class=" mb-3">
+                    <label for="card" class="form-label">Fisrt Name</label>
+                    <input class="form-control" type="text" id="usuario" required>
+                    <div class="valid-feedback"> All good</div>
+                    <div class="invalid-feedback">Please enter your Name</div>
+                </div>
+    
+                <div class="col mb-3">
+                    <label for="card" class="form-label">Last Name</label>
+                    <input class="form-control" type="text" id="usuario" required>
+                    <div class="valid-feedback"> All good</div>
+                    <div class="invalid-feedback">Please enter your Last Name</div>
+                </div>
+            </div>
+
+            <!-- Información Lugar de residencia -->
+            <div class="col d-flex align-items-center justify-content-between">
+                <div class="mb-3">
+                    <label for="direccion">City</label>
+                    <input type="text" class="form-control" id="city" required>
+                    <div class="valid-feedback"> All good</div>
+                    <div class="invalid-feedback">Please enter your city</div>
+                </div>
+
+                <div class="col mb-3">
+                    <label for="pais">State</label>
+                    <div class="valid-feedback"> All good</div>
+                    <div class="invalid-feedback">Please enter your city</div>
+
+                    <select class="form-select" disabled">
+                        <option value="select">Pick State</option>
+                        <option value="A Coruña">A Coruña</option>
+                        <option value="Lugo">Lugo</option>
+                        <option value="Ourense">Ourense</option>
+                        <option value="Pontevedra">Pontevedra</option>
+                    </select>
+
+                </div>
+
+                <div class="col mb-3">
+                    <label for="codigo-postal">Postal Code</label>
+                    <input class="form-control" type="text" id="codigo-postal">
+                    <div class="valid-feedback"> All good</div>
+                    <div class="invalid-feedback">Please enter your postal code </div>
+                </div>
+            </div>
+
+             <div class="col row d-flex align-items-start">
+                <p>We accept:</p>
+                <!-- Credit cards -->
+                <div class="col btn btn-secondary d-flex justify-content-start ">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard"></i></label>
+    
+                    </div>
+                    
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-visa"></i></label>
+                    </div>
+        
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-diners-club"></i></label>
+                    </div>
+        
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-stripe"></i></label>
+                    </div>    
+                </div>
+                
+                    <div class="col">
+                        <p>Message</p>
+                    <div class="form-floating">                        
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2"></label>
+                        <div class="valid-feedback"> All good</div>
+                        <div class="invalid-feedback">Please your comment here/div>
+                    </div>
+                    <p> Add any note here.</p>
+                </div>
+
+             </div>
+
+             <div class="bg-body-tertiary d-flex justify-content-end">
+                <hr class="mb-4 border">
+                <input type="submit" value="Cancel" class="btn btn-secondary btn-lg btn-primary">       
+                <input type="submit" value="Send" class="btn btn-block btn-lg btn-primary">
+             </div>
+
+         </div>
+        </form>
+        
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+        </script>
+    
+
+    </div>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</html>
